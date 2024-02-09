@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Top-level menu -->
+        <menuitem id="menu_bloodbank_property" name="Blood Bank Management" sequence="10"/>
+
+        <!-- First-level menu -->
+        <menuitem id="menu_bloodbank_property_main" name="Properties" parent="menu_bloodbank_property" sequence="10"/>
+
+        <!-- Second-level menu -->
+        <menuitem id="menu_estate_property_action" name="Property Actions" parent="menu_bloodbank_property_main" sequence="10"
+                  action="bloodbank_property_action"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+        <data>
+        
+            <record id="bloodbank_property_action" model="ir.actions.act_window">
+                <field name="name">Blood Bank Properties</field>
+                <field name="res_model">bloodbank_property</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">
+                        View and manage real estate properties.
+                    </p>
+                    <p>
+                        Use this menu to access the list of real estate properties and manage their details.
+                    </p>
+                </field>
+            </record>
+
+            <record id="bloodbank_property_form_view" model="ir.ui.view">
+                <field name="name">bloodbank.property.form</field>
+                <field name="model">bloodbank_property</field>
+                <field name="arch" type="xml">
+                    <form string="Bloodbank Property">
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="donor_id"/>
+                                    <field name="weight"/>
+                                    <field name="age"/>
+                                </group>
+                                <group>
+                                    <field name="blood_group"/>
+                                    <field name="blood_bag"/>
+                                    <field name="units"/>
+                                    <field name="donation_date"/>
+                                </group>
+                                <notebook>
+                                    <page string="Description">
+                                        <group>
+                                        <field name="description"/>
+                                        
+                                        </group>
+                                    </page>
+                                </notebook>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+            <record id="bloodbank_property_search_view" model="ir.ui.view">
+                <field name="name">bloodbank.property.search</field>
+                <field name="model">bloodbank_property</field>
+                <field name="arch" type="xml">
+                    <search string="Search BloodBank Properties">
+                        <field name="name" string="Donor Name"/>
+                        <field name="blood_group" string="Blood Group"/>
+                        <field name="weight" string="Weight"/>
+                        <field name="age" string="Age"/>
+                        <field name="donation_date" string="Donation Date"/>
+                    </search>
+                </field>
+            </record>
+
+        </data>
+    </odoo>

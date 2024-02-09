@@ -1,0 +1,1 @@
+from . import blood_bank_property_model
