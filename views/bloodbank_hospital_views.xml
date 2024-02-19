@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+        <data>
+        
+            <record id="bloodbank_hospital_property_action" model="ir.actions.act_window">
+                <field name="name">Blood Bank Hospital Properties</field>
+                <field name="res_model">bloodbank.hospital.property</field>
+                <field name="view_mode">tree,form</field>
+                <field name="help" type="html">
+                    <p class="o_view_nocontent_smiling_face">
+                        View and manage real estate properties.
+                    </p>
+                    <p>
+                        Use this menu to access the list of real estate properties and manage their details.
+                    </p>
+                </field>
+            </record>
+
+            <record id="bloodbank_hospital_property_form_view" model="ir.ui.view">
+                <field name="name">bloodbank.hospital.property.form</field>
+                <field name="model">bloodbank.hospital.property</field>
+                <field name="arch" type="xml">
+                    <form >
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="name"/>
+                                </group>
+                                <group>
+                                    <field name="address"/>
+                                    <field name="contact_no"/>
+
+                                </group>
+                                <notebook>
+                                    <page string="Description">
+                                        <group>
+                                        <field name="description"/>
+                                        
+                                        </group>
+                                    </page>
+                                </notebook>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+            <record id="bloodbank_hospital_property_list_view" model="ir.ui.view">
+                <field name="name">bloodbank.hospital.property.list</field>
+                <field name="model">bloodbank.hospital.property</field>
+                <field name="arch" type="xml">
+                    <tree>
+                        <field name="name"/>
+                        <field name="contact_no"/>
+                        <!-- <field name="weight"/>
+                        <field name="age"/>
+                        <field name="units"/>                         -->
+                    </tree>
+                </field>
+            </record>
+
+        </data>
+    </odoo>

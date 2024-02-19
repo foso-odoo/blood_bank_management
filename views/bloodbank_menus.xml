@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    <!-- Top menu item -->
+    <menuitem id="bloodbank_menu_root" name="Blood Bank Management">
+        <menuitem id="bloodbank_property_menu" name="Donor Property" sequence="5">
+            <menuitem id="bloodbank_property_menu_action" action="bloodbank_property_action" sequence="5"/>
+        </menuitem>
+        <menuitem id="bloodbank_settings_menu" name="Settings" sequence="10">
+            <menuitem id="bloodbank_property_patient_menu_action" action="bloodbank_patient_property_action" sequence="5"/>
+            <menuitem id="bloodbank_property_hospital_menu_action" action="bloodbank_hospital_property_action" sequence="10"/>
+        </menuitem>
+        <menuitem id="bloodbank_settings_second_menu" name="Inventory" sequence="15">
+            <menuitem id="bloodbank_property_blood_menu_action" action="bloodbank_blood_property_action" sequence="5"/>
+            <menuitem id="bloodbank_property_bloodstock_menu_action" action="bloodbank_bloodstock_property_action" sequence="10"/>
+        </menuitem>
 
-        <!-- Top-level menu -->
-        <menuitem id="menu_bloodbank_property" name="Blood Bank Management" sequence="10"/>
-
-        <!-- First-level menu -->
-        <menuitem id="menu_bloodbank_property_main" name="Properties" parent="menu_bloodbank_property" sequence="10"/>
-
-        <!-- Second-level menu -->
-        <menuitem id="menu_estate_property_action" name="Property Actions" parent="menu_bloodbank_property_main" sequence="10"
-                  action="bloodbank_property_action"/>
-
-    </data>
+    </menuitem>
 </odoo>

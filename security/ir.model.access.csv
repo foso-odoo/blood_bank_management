@@ -1,2 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_bloodbank_property,BloodBank Property Access,model_bloodbank_property,base.group_user,1,1,1,1
+access_bloodbank_patient_property,BloodBank Patient Property Access,model_bloodbank_patient_property,base.group_user,1,1,1,1
+access_bloodbank_hospital_property,BloodBank Hospital Property Access,model_bloodbank_hospital_property,base.group_user,1,1,1,1
+access_bloodbank_blood_property,BloodBank Blood Property Access,model_bloodbank_blood_property,base.group_user,1,1,1,1
+access_bloodbank_bloodstock_property,BloodBank Bloodstock Property Access,model_bloodbank_bloodstock_property,base.group_user,1,1,1,1

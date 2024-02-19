@@ -2,9 +2,9 @@
     <odoo>
         <data>
         
-            <record id="bloodbank_property_action" model="ir.actions.act_window">
-                <field name="name">Blood Bank Properties</field>
-                <field name="res_model">bloodbank.property</field>
+            <record id="bloodbank_patient_property_action" model="ir.actions.act_window">
+                <field name="name">Blood Bank Patient Properties</field>
+                <field name="res_model">bloodbank.patient.property</field>
                 <field name="view_mode">tree,form</field>
                 <field name="help" type="html">
                     <p class="o_view_nocontent_smiling_face">
@@ -16,23 +16,26 @@
                 </field>
             </record>
 
-            <record id="bloodbank_property_form_view" model="ir.ui.view">
-                <field name="name">bloodbank.property.form</field>
-                <field name="model">bloodbank.property</field>
+            <record id="bloodbank_patient_property_form_view" model="ir.ui.view">
+                <field name="name">bloodbank.patient.property.form</field>
+                <field name="model">bloodbank.patient.property</field>
                 <field name="arch" type="xml">
-                    <form string="Bloodbank Property">
+                    <form >
                         <sheet>
                             <group>
                                 <group>
                                     <field name="name"/>
-                                    <field name="weight"/>
-                                    <field name="age"/>
                                 </group>
                                 <group>
+                                    <field name="request_date"/>
                                     <field name="blood_group"/>
-                                    <field name="blood_bag"/>
-                                    <field name="units"/>
-                                    <field name="donation_date"/>
+                                    <field name="approx_date"/>
+                                    <field name="is_urgent"/>
+                                </group>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="phone_no"/>
+                                    <field name="current_disease"/>
                                 </group>
                                 <notebook>
                                     <page string="Description">
@@ -48,29 +51,31 @@
                 </field>
             </record>
 
-            <record id="bloodbank_property_list_view" model="ir.ui.view">
-                <field name="name">bloodbank.property.list</field>
-                <field name="model">bloodbank.property</field>
+
+            <record id="bloodbank_patient_property_list_view" model="ir.ui.view">
+                <field name="name">bloodbank.patient.property.list</field>
+                <field name="model">bloodbank.patient.property</field>
                 <field name="arch" type="xml">
                     <tree >
                         <field name="name"/>
-                        <field name="weight"/>
+                        <field name="phone_no"/>
+                        <field name="current_disease"/>
+                        <!-- <field name="weight"/>
                         <field name="age"/>
-                        <field name="units"/>                        
+                        <field name="units"/>                         -->
                     </tree>
                 </field>
             </record>
 
-            <record id="bloodbank_property_search_view" model="ir.ui.view">
-                <field name="name">bloodbank.property.search</field>
-                <field name="model">bloodbank.property</field>
+            <record id="bloodbank_patient_property_search_view" model="ir.ui.view">
+                <field name="name">bloodbank.patient.property.search</field>
+                <field name="model">bloodbank.patient.property</field>
                 <field name="arch" type="xml">
                     <search string="Search BloodBank Properties">
-                        <field name="name" string="Donor Name"/>
+                        <field name="name" string="Patient Name"/>
                         <field name="blood_group" string="Blood Group"/>
-                        <field name="weight" string="Weight"/>
-                        <field name="age" string="Age"/>
-                        <field name="donation_date" string="Donation Date"/>
+                        <field name="phone_no" string="Phone No"/>
+                        <field name="current_disease" string="Current Disease"/>
                     </search>
                 </field>
             </record>

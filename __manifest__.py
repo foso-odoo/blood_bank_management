@@ -10,6 +10,12 @@
         'security/ir.model.access.csv',
         
         'views/bloodbank_property_views.xml',
+        'views/bloodbank_patient_views.xml',
+        'views/bloodbank_hospital_views.xml',
+        'views/bloodbank_blood_views.xml',
+        'views/bloodbank_bloodstock_views.xml',
+
+        
         'views/bloodbank_menus.xml',
         ],
 }
