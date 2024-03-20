@@ -4,3 +4,4 @@ access_bloodbank_patient_property,BloodBank Patient Property Access,model_bloodb
 access_bloodbank_hospital_property,BloodBank Hospital Property Access,model_bloodbank_hospital_property,base.group_user,1,1,1,1
 access_bloodbank_blood_property,BloodBank Blood Property Access,model_bloodbank_blood_property,base.group_user,1,1,1,1
 access_bloodbank_bloodstock_property,BloodBank Bloodstock Property Access,model_bloodbank_bloodstock_property,base.group_user,1,1,1,1
+access_bloodbank_bloodcount,access_bloodbank_bloodcount,model_bloodbank_bloodcount,base.group_user,1,1,1,1

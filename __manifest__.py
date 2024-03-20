@@ -6,6 +6,7 @@
     'description': """This is the Real Estate Module which describes what is expected price for property for seller and buyer can see this
     """,
     'application': True,
+    'installable': True,
     'data': [
         'security/ir.model.access.csv',
         

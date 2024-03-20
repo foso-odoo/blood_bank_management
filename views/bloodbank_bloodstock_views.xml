@@ -11,7 +11,7 @@
                         View and manage real estate properties.
                     </p>
                     <p>
-                        Use this menu to access the list of real bloodbank properties and manage their details.
+                        Use this menu to access the list of bloodbank properties and manage their details.
                     </p>
                 </field>
             </record>
@@ -24,10 +24,15 @@
                         <sheet>
                             <group>
                                 <group>
-                                    <field name="blood_group"/>
+                                    <field name="name"/>
+                                    <!-- <field name="blood_group_ids" widget="many2many_tags"/> -->
                                     <field name="blood_bag"/>
-                                    <field name="available_quantity"/>
-                                    <field name="expiry_date"/>
+                                    <field name="available_quantity" readonly = '1' />
+                                    <field name="available_quantity_A" readonly='1'/>
+                                    <field name="available_quantity_B" readonly='1'/>
+                                    <field name="available_quantity_AB" readonly='1'/>
+                                    <field name="available_quantity_O" readonly='1'/>
+                                    <field name="hospital_id"/>
                                     <field name="cost"/>
                                 </group>
                                 <notebook>
@@ -37,7 +42,7 @@
                                         
                                         </group>
                                     </page>
-                                </notebook>
+                            </notebook>
                             </group>
                         </sheet>
                     </form>
@@ -49,10 +54,11 @@
                 <field name="model">bloodbank.bloodstock.property</field>
                 <field name="arch" type="xml">
                     <tree>
-                        <field name="blood_group"/>   
+                        <field name="name"/>
+                        <field name="blood_group_ids"/>   
                         <field name="blood_bag"/>
                         <field name="available_quantity"/>
-                        <field name="expiry_date"/>
+                        <field name="hospital_id"/>
                         <field name="cost"/>           
                     </tree>
                 </field>

@@ -20,19 +20,27 @@
                 <field name="name">bloodbank.property.form</field>
                 <field name="model">bloodbank.property</field>
                 <field name="arch" type="xml">
-                    <form string="Bloodbank Property">
+                    <form>
+                          <header>
+                             <!-- <button name="action_sold" type="object" string="Sold"/>
+                            <button name="action_cancel" type="object" string="Cancel"/> -->
+                            <field name="state" widget="statusbar" statusbar_visible="draft,test,donate,reject"/>
+                          </header>
                         <sheet>
                             <group>
                                 <group>
                                     <field name="name"/>
                                     <field name="weight"/>
                                     <field name="age"/>
+                                    <field name="state" string="State"/>
                                 </group>
                                 <group>
+                                    <field name="blood_bank_id"/>
                                     <field name="blood_group"/>
                                     <field name="blood_bag"/>
                                     <field name="units"/>
                                     <field name="donation_date"/>
+                                    <field name="expiry_date"/>
                                 </group>
                                 <notebook>
                                     <page string="Description">
@@ -54,9 +62,11 @@
                 <field name="arch" type="xml">
                     <tree >
                         <field name="name"/>
+                        <field name="blood_bank_id"/>
                         <field name="weight"/>
                         <field name="age"/>
-                        <field name="units"/>                        
+                        <field name="units"/>     
+                        <field name="blood_group"/>                   
                     </tree>
                 </field>
             </record>
@@ -71,6 +81,8 @@
                         <field name="weight" string="Weight"/>
                         <field name="age" string="Age"/>
                         <field name="donation_date" string="Donation Date"/>
+                        <field name="expiry_date"  string="Expiration Date"/>
+
                     </search>
                 </field>
             </record>

@@ -11,7 +11,7 @@
                         View and manage real estate properties.
                     </p>
                     <p>
-                        Use this menu to access the list of real estate properties and manage their details.
+                        Use this menu to access the list of blood bank properties and manage their details.
                     </p>
                 </field>
             </record>
@@ -22,6 +22,20 @@
                 <field name="arch" type="xml">
                     <form >
                         <sheet>
+                        <div class="oe_button_box" name="button_box">
+                        <button name="%(blood_bank_management.bloodbank_bloodstock_property_action)d" type="action" class="oe_stat_button" icon="fa-money">
+                            <field name="bloodbank_count_for_A" widget="statinfo" string="Available BloodBank : Group A"/>
+                        </button>
+                        <button name="%(blood_bank_management.bloodbank_bloodstock_property_action)d" type="action" class="oe_stat_button" icon="fa-money">
+                            <field name="bloodbank_count_for_B" widget="statinfo" string="Available BloodBank : Group B"/>
+                        </button>
+                        <button name="%(blood_bank_management.bloodbank_bloodstock_property_action)d" type="action" class="oe_stat_button" icon="fa-money">
+                            <field name="bloodbank_count_for_C" widget="statinfo" string="Available BloodBank : Group AB"/>
+                        </button>
+                        <button name="%(blood_bank_management.bloodbank_bloodstock_property_action)d" type="action" class="oe_stat_button" icon="fa-money">
+                            <field name="bloodbank_count_for_D" widget="statinfo" string="Available BloodBank : Group O"/>
+                        </button>
+                        </div>
                             <group>
                                 <group>
                                     <field name="name"/>
@@ -29,6 +43,7 @@
                                 <group>
                                     <field name="address"/>
                                     <field name="contact_no"/>
+                                    <field name="required_units"/>
 
                                 </group>
                                 <notebook>
@@ -38,6 +53,18 @@
                                         
                                         </group>
                                     </page>
+
+
+                                     <!-- <page string="Blood Banks">
+                                         <field name="blood_bank_ids">
+                                         <tree>
+                                              <field name="blood_group"/>
+                                              <field name="blood_bag"/>
+                                              <field name="available_quantity"/>
+                                              <field name="cost"/>
+                                          </tree>
+                                         </field>
+                                    </page> -->
                                 </notebook>
                             </group>
                         </sheet>
@@ -52,6 +79,8 @@
                     <tree>
                         <field name="name"/>
                         <field name="contact_no"/>
+                        <field name="required_units"/>
+
                         <!-- <field name="weight"/>
                         <field name="age"/>
                         <field name="units"/>                         -->
